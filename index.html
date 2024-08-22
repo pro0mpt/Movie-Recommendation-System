@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Movie Recommendation System</h1>
+        </header>
+
+        <section class="emotion-selection">
+            <label for="emotionalState">Select Your Emotional State:</label>
+            <select id="emotionalState" aria-label="Select Your Emotional State">
+                <option value="" disabled selected>Select an option</option>
+                <option value="joy">Joy and Happiness</option>
+                <option value="excitement">Excitement and Adventure</option>
+                <option value="suspense">Suspense and Tension</option>
+                <option value="fear">Fear and Dread</option>
+                <option value="sadness">Sadness and Melancholy</option>
+                <option value="inspiration">Inspiration and Triumph</option>
+                <option value="wonder">Wonder and Imagination</option>
+                <option value="nostalgia">Nostalgia and Sentimentality</option>
+                <option value="anger">Anger and Outrage</option>
+                <option value="awe">Awe and Reverence</option>
+            </select>
+            <button id="selectEmotion" onclick="selectEmotion()">Next</button>
+        </section>
+
+        <section class="genre-selection" id="genreSection" style="display:none;">
+            <label for="genre">Select a Genre:</label>
+            <select id="genre" aria-label="Select a Genre">
+                <!-- Genres will be dynamically populated here -->
+            </select>
+            <button id="selectGenre" onclick="selectGenre()">Next</button>
+        </section>
+
+        <section class="movie-selection" id="movieSection" style="display:none;">
+            <label for="movie">Select a Movie:</label>
+            <select id="movie" aria-label="Select a Movie">
+                <!-- Movies will be dynamically populated here -->
+            </select>
+            <button onclick="watchMovie()">Watch Now</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
